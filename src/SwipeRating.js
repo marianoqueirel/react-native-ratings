@@ -216,7 +216,7 @@ export default class SwipeRating extends Component {
     return (
       <View style={styles.showRatingView}>
         <View style={styles.ratingView}>
-          <Text style={[styles.ratingText, { color }]}>Rating:{' '}</Text>
+          <Text style={[styles.ratingText, { color }]}>Valoración:{' '}</Text>
           <Text style={[styles.currentRatingText, { color }]}>{this.getCurrentRating(this.state.value)}</Text>
           <Text style={[styles.maxRatingText, { color }]}>/{ratingCount}</Text>
         </View>
