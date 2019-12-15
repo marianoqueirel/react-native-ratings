@@ -221,6 +221,7 @@ export default class SwipeRating extends Component {
           <Text style={[styles.maxRatingText, { color }]}>/{ratingCount}</Text>
         </View>
         <View>{readonly && showReadOnlyText && <Text style={[styles.readonlyLabel, { color }]}>(readonly)</Text>}</View>
+
       </View>
     );
   }
