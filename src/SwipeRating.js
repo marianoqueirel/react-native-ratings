@@ -17,7 +17,7 @@ const BELL_IMAGE = require('./images/bell.png');
 const TYPES = {
   star: {
     source: STAR_IMAGE,
-    color: '#f1c40f',
+    color: '#fbc728',
     backgroundColor: 'white'
   },
   heart: {
@@ -41,7 +41,7 @@ export default class SwipeRating extends Component {
   static defaultProps = {
     type: 'star',
     ratingImage: require('./images/star.png'),
-    ratingColor: '#f1c40f',
+    ratingColor: '#fbc728',
     ratingBackgroundColor: 'white',
     ratingCount: 5,
     showReadOnlyText: true,
@@ -218,10 +218,9 @@ export default class SwipeRating extends Component {
         <View style={styles.ratingView}>
           <Text style={[styles.ratingText, { color }]}>Valoración:{' '}</Text>
           <Text style={[styles.currentRatingText, { color }]}>{this.getCurrentRating(this.state.value)}</Text>
-          <Text style={[styles.maxRatingText, { color }]}>/{ratingCount}</Text>
+          <Text style={[styles.maxRatingText, { color }]}>{' (350)'}</Text>
         </View>
         <View>{readonly && showReadOnlyText && <Text style={[styles.readonlyLabel, { color }]}>(readonly)</Text>}</View>
-
       </View>
     );
   }
@@ -303,7 +302,7 @@ const styles = StyleSheet.create({
     color: '#34495a'
   },
   currentRatingText: {
-    fontSize: 30,
+    fontSize: 18,
     textAlign: 'center',
     fontFamily: Platform.OS === 'ios' ? 'Trebuchet MS' : null
   },
